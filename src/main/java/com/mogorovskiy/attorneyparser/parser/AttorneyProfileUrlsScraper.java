@@ -1,6 +1,6 @@
 package com.mogorovskiy.attorneyparser.parser;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.List;
 
 public interface AttorneyProfileUrlsScraper {

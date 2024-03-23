@@ -1,9 +1,10 @@
 package com.mogorovskiy.attorneyparser.parser.golaw;
 
-import com.mogorovskiy.attorneyparser.model.*;
+import com.mogorovskiy.attorneyparser.model.Attorney;
+import com.mogorovskiy.attorneyparser.model.AttorneyProfileSource;
 import com.mogorovskiy.attorneyparser.parser.AttorneyProfileParser;
-import org.jsoup.*;
-import org.jsoup.nodes.*;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import static com.mogorovskiy.attorneyparser.helper.JsoupHelper.toStringList;
 

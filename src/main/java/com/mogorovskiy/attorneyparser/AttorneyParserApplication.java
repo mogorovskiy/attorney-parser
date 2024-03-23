@@ -4,7 +4,7 @@ import com.mogorovskiy.attorneyparser.model.Attorney;
 import com.mogorovskiy.attorneyparser.parser.AttorneyParser;
 import com.mogorovskiy.attorneyparser.parser.golaw.GolawAttorneyParser;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.List;
 
 public class AttorneyParserApplication {

@@ -1,6 +1,7 @@
 package com.mogorovskiy.attorneyparser.model;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor

@@ -1,11 +1,10 @@
 package com.mogorovskiy.attorneyparser.parser.golaw;
 
-import com.mogorovskiy.attorneyparser.model.*;
+import com.mogorovskiy.attorneyparser.model.AttorneyProfileSource;
 import com.mogorovskiy.attorneyparser.parser.AttorneyProfileSourceScraper;
-import org.jsoup.*;
+import org.jsoup.Jsoup;
 
-import java.io.*;
-
+import java.io.IOException;
 
 public class GolawAttorneyProfileSourceScraper implements AttorneyProfileSourceScraper {
 

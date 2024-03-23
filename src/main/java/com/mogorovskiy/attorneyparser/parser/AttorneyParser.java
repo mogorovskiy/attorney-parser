@@ -1,10 +1,11 @@
 package com.mogorovskiy.attorneyparser.parser;
 
-import com.mogorovskiy.attorneyparser.model.*;
+import com.mogorovskiy.attorneyparser.model.Attorney;
+import com.mogorovskiy.attorneyparser.model.AttorneyProfileSource;
 import lombok.RequiredArgsConstructor;
-
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @RequiredArgsConstructor
 public abstract class AttorneyParser {

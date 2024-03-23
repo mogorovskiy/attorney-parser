@@ -1,9 +1,9 @@
 package com.mogorovskiy.attorneyparser.helper;
 
-import org.jsoup.nodes.*;
-import org.jsoup.select.*;
-
-import java.util.*;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JsoupHelper {
 
