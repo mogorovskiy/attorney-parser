@@ -1,5 +1,9 @@
 package com.mogorovskiy.attorneyparser.parser;
 
+import com.mogorovskiy.attorneyparser.model.*;
+
+import java.io.*;
+
 public interface AttorneyProfileSourceScraper {
-    String scrape(String profileUrl);
+    AttorneyProfileSource scrape(String profileUrl) throws IOException;
 }

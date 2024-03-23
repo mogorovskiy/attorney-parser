@@ -1,9 +1,10 @@
 package com.mogorovskiy.attorneyparser.parser;
 
-import com.mogorovskiy.attorneyparser.model.Attorney;
+import com.mogorovskiy.attorneyparser.model.*;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 @RequiredArgsConstructor
 public abstract class AttorneyParser {
@@ -12,15 +13,18 @@ public abstract class AttorneyParser {
     private final AttorneyProfileSourceScraper sourceScraper;
     private final AttorneyProfileParser profileParser;
 
-    public final List<Attorney> parse() {
+    public final List<Attorney> parse() throws IOException {
         List<String> profileUrls = profileUrlsScraper.scrape();
 
-        List<String> profileSources = profileUrls.stream()
-                .map(sourceScraper::scrape)
-                .toList();
+        List<AttorneyProfileSource> profileSources = new ArrayList<>();
+        for (String profileUrl : profileUrls) {
+            profileSources.add(sourceScraper.scrape(profileUrl));
+        }
 
-        return profileSources.stream()
-                .map(profileParser::parse)
-                .toList();
+        List<Attorney> attorneys = new ArrayList<>();
+        for (AttorneyProfileSource source : profileSources) {
+            attorneys.add(profileParser.parse(source));
+        }
+        return attorneys;
     }
 }

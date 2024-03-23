@@ -1,12 +1,21 @@
 package com.mogorovskiy.attorneyparser.parser.golaw;
 
 import com.mogorovskiy.attorneyparser.parser.AttorneyProfileUrlsScraper;
+import org.jsoup.*;
 
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class GolawAttorneyProfileUrlsScraper implements AttorneyProfileUrlsScraper {
+
+    private static final String LISTING_URL = "https://golaw.ua/people/";
+    private static final String PROFILE_URLS_SELECTOR = "h2 > a";
+
     @Override
-    public List<String> scrape() {
-        return null;//todo implement
+    public List<String> scrape() throws IOException {
+        return Jsoup.connect(LISTING_URL).get()
+                .select(PROFILE_URLS_SELECTOR).stream()
+                .map(element -> element.attr("href"))
+                .toList();
     }
 }
