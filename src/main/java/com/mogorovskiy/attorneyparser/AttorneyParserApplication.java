@@ -4,6 +4,7 @@ import com.mogorovskiy.attorneyparser.model.Attorney;
 import com.mogorovskiy.attorneyparser.parser.AttorneyParser;
 import com.mogorovskiy.attorneyparser.parser.golaw.GolawAttorneyParser;
 
+import java.io.IOException;
 import java.util.List;
 
 public class AttorneyParserApplication {
@@ -12,11 +13,11 @@ public class AttorneyParserApplication {
             new GolawAttorneyParser()
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new AttorneyParserApplication().run();
     }
 
-    public void run() {
+    public void run() throws IOException {
         for (AttorneyParser parser : parsers) {
             List<Attorney> attorneys = parser.parse();
 
