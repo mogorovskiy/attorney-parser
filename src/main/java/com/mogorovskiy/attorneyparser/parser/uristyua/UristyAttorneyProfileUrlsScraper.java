@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UristyAttorneyProfileUrlsScraper implements AttorneyProfileUrlsScraper {
+
     private static final String LISTING_URL = "https://uristy.ua/lawyers/cernigiv";
     private static final String PROFILE_URLS_SELECTOR = "p[class=lead] a";
     private static final int MINIMAL_NUMBER_OF_ID_CHARACTERS = 4;
