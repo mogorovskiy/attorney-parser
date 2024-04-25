@@ -3,10 +3,9 @@ package com.mogorovskiy.attorneyparser;
 import com.mogorovskiy.attorneyparser.model.Attorney;
 import com.mogorovskiy.attorneyparser.parser.AttorneyParser;
 import com.mogorovskiy.attorneyparser.parser.golaw.GolawAttorneyParser;
-import com.mogorovskiy.attorneyparser.parser.uristyua.*;
-
+import com.mogorovskiy.attorneyparser.parser.uristyua.UristyAttorneyParser;
 import java.io.IOException;
-import java.util.*;
+import java.util.List;
 
 public class AttorneyParserApplication {
 

@@ -9,6 +9,7 @@ import java.util.List;
 @Setter
 @ToString
 public class Attorney {
+
     private String fullName;
     private String title;
     private String bio;
